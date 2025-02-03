@@ -19,13 +19,12 @@ const ImageSlider = () => {
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 3000
+        autoplaySpeed: 2000
     };
-
 
     return (
         <div className="banner">
-            <div style={{ width: "80%", margin: "auto", }}>
+            <div style={{ width: "80%", margin: "auto"}}>
                 <Slider {...settings}>
                     <div className="d-flex">
                         <h1 className="heading mt-5">50% Off For Your  <br />  First Shopping<p className="para fs-6">Lorem epturi accusantium modi! Dolorem nobis eius sit similique illum at, placeat omnis neque atque quae iure maiores fugit placeat omnis neque atque quae.</p> <button className="btn ">Visit collections</button></h1>
@@ -43,10 +42,12 @@ const ImageSlider = () => {
                         <h1 className="heading mt-5">50% Off For Your  <br />  First Shopping<p className="para fs-6">Lorem epturi accusantium modi! Dolorem nobis eius sit similique illum at, placeat omnis neque atque quae iure maiores fugit placeat omnis neque atque quae.</p> <button className="btn ">Visit collections</button></h1>
                         <img src={image4} alt="Slide 1" style={{ width: "45%" }} />
                     </div>
-
+                  
+        
                 </Slider>
-            </div>
-        </div>
+                </div>
+                </div>
+          
 
     );
 }
