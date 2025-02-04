@@ -2,6 +2,9 @@ import React from 'react'
 import ImageSlider from './ImageSlider';
 import Card from './Card';
 import Footer from './Footer';
+import ProductList from './ProductList';
+
+
 
 
 
@@ -10,8 +13,8 @@ const Home = () => {
         <div>
             <ImageSlider />
             <Card/>
-            <Footer/>
-            
+            <ProductList/>
+            <Footer/>   
         </div>
     )
 }

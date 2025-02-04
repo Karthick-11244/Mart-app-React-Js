@@ -1,0 +1,85 @@
+.product-container {
+    padding: 20px;
+    background-color: #f0f5f5;
+}
+  
+  .section-title {
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top: 50px;
+  }
+  
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 25px;
+
+  }
+  
+  .product-card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    /* text-align: center; */
+    position: relative;
+    margin-top: 50px;
+  }
+  
+  .discount-tag {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background:rgb(28, 5, 85);
+    ;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+  }
+  
+  .product-image {
+    display: flex;
+    height: 200px;
+    width: auto;
+    margin: 10px auto;
+   
+  }
+  
+  .product-title {
+    font-size: 16px;
+    margin: 10px 0;
+  }
+  
+  .rating {
+    color: #ffcc00;
+    
+  }
+  
+  .product-price {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 5px 0;
+    padding-top: 10px;
+  }
+  
+  .add-to-cart {
+   position: absolute;
+   right: 8px;
+   bottom: 15px;
+    background: white;
+    color: rgb(28, 5, 85);
+    font-size: 18px;
+    width: 40px;
+    height: 40px;
+     border-color: rgb(103, 164, 217);
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  .add-to-cart:hover{
+    background-color:rgb(28, 5, 85);
+    color: white;
+    border: none;
+  }

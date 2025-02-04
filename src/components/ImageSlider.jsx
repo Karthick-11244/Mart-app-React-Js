@@ -23,7 +23,7 @@ const ImageSlider = () => {
     };
 
     return (
-        <div className="banner">
+        <div className="banner" style={{marginTop:"50px",paddingTop:"50px"}}>
             <div style={{ width: "80%", margin: "auto"}}>
                 <Slider {...settings}>
                     <div className="d-flex">
