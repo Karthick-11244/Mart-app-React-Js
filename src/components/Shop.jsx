@@ -1,13 +1,15 @@
 import React from 'react'
-import ShopDetails from './ShopDetails'
+import Footer from './Footer'
+import ProductItem from "./ProductItem"
+
 
 
 
 const Shop = () => {
     return (
         <div>
-            
-            <ShopDetails/>
+            <ProductItem/>
+            <Footer/>   
         </div>
     )
 }
