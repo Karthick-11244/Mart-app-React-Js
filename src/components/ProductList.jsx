@@ -1,16 +1,19 @@
 import React from "react";
-import { discoutProducts, products } from "../data/Product"; // Import discount products data
+import { useDispatch } from "react-redux";
+import { addToCart } from "../cartSlice"; // Import cart actions
+import { discoutProducts, products } from "../data/Product";
 import "../ProductList.css";
-import { toast, ToastContainer } from 'react-toastify';  // Import React Toastify
-import 'react-toastify/dist/ReactToastify.css';  // Import styles for Toastify
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const ProductList = () => {
+    const dispatch = useDispatch();
 
-    // Handle adding product to cart and showing toast
-    const handleAddToCart = (productName) => {
-        toast.success(`${productName} has been added to Cart!`, {
-            position: "top-right", // Position of the notification
-            autoClose: 3000, // Auto close after 3 seconds
+    const handleAddToCart = (product) => {
+        dispatch(addToCart(product));
+        toast.success(`${product.productName} has been added to Cart!`, {
+            position: "top-right",
+            autoClose: 3000,
         });
     };
 
@@ -32,18 +35,12 @@ const ProductList = () => {
                                 <i className="fa-solid fa-star"></i>
                             </div>
                             <p className="product-price">${item.price}</p>
-                            <button
-                                className="add-to-cart"
-                                onClick={() => handleAddToCart(item.productName)} // Trigger toast when clicked
-                            >
-                                +
-                            </button>
+                            <button className="add-to-cart" onClick={() => handleAddToCart(item)}>+</button>
                         </div>
                     ))}
                 </div>
             </div>
 
-            {/* New Arrival Section */}
             <div className="product-container">
                 <h2 className="section-title">New Arrival</h2>
                 <div className="product-grid">
@@ -59,18 +56,12 @@ const ProductList = () => {
                                 <i className="fa-solid fa-star"></i>
                             </div>
                             <p className="product-price">${item.price}</p>
-                            <button
-                                className="add-to-cart"
-                                onClick={() => handleAddToCart(item.productName)} // Trigger toast when clicked
-                            >
-                                +
-                            </button>
+                            <button className="add-to-cart" onClick={() => handleAddToCart(item)}>+</button>
                         </div>
                     ))}
                 </div>
             </div>
 
-            {/* Best Sales Section */}
             <div className="product-container">
                 <h2 className="section-title">Best Sales</h2>
                 <div className="product-grid">
@@ -86,18 +77,12 @@ const ProductList = () => {
                                 <i className="fa-solid fa-star"></i>
                             </div>
                             <p className="product-price">${item.price}</p>
-                            <button
-                                className="add-to-cart"
-                                onClick={() => handleAddToCart(item.productName)} // Trigger toast when clicked
-                            >
-                                +
-                            </button>
+                            <button className="add-to-cart" onClick={() => handleAddToCart(item)}>+</button>
                         </div>
                     ))}
                 </div>
             </div>
 
-            {/* Toast Container for notifications */}
             <ToastContainer />
         </>
     );

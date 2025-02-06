@@ -28,6 +28,9 @@ const ProductItem = () => {
       position: "top-right",  // Correct positioning format as a string
       autoClose: 3000, // Auto close after 3 seconds
     });
+
+    //for add to cart
+
   };
 
   return (
