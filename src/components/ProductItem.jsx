@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import Image from '../images/table.jpg';
 import "../ProductItem.css";
@@ -6,6 +5,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { products } from '../data/Product';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+
+import { addToCart } from "../cartSlice"; // Import cart actions
+import { useDispatch } from "react-redux";
+
 
 const ProductItem = () => {
   const [searchTerm, setSearchTerm] = useState(""); // Store search input
@@ -23,14 +26,13 @@ const ProductItem = () => {
   });
 
   // Handle adding product to cart and showing toast
-  const handleAddToCart = (productName) => {
-    toast.success(`${productName} has been added to Cart!`, {
+  const dispatch = useDispatch();
+  const handleAddToCart = (product) => {
+      dispatch(addToCart(product));
+    toast.success(`${product.productName} has been added to Cart!`, {
       position: "top-right",  // Correct positioning format as a string
       autoClose: 3000, // Auto close after 3 seconds
     });
-
-    //for add to cart
-
   };
 
   return (
