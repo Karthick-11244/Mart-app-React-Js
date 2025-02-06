@@ -101,7 +101,7 @@ const ProductItem = () => {
                 <p className="product-price">${item.price}</p>
                 <button
                   className="add-to-cart"
-                  onClick={() => handleAddToCart(item.productName)} // Trigger toast when clicked
+                  onClick={() => handleAddToCart(item)} // Trigger toast when clicked
                 >
                   +
                 </button>
