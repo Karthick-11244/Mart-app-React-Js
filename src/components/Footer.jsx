@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 const Footer = () => {
 
     return (
-        <footer style={{ backgroundColor: "#224b99", color: "white", padding: "20px", }}>
+        <footer style={{  background:"rgb(28, 5, 85)",color: "white", padding: "20px", }}>
             <div className="container">
                 <div className="row ">
                     {/* Mart Section */}

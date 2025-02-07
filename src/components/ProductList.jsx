@@ -16,7 +16,8 @@ const ProductList = () => {
             position: "top-right",
             autoClose: 3000,
         });
-    };
+
+    }
 
     return (
         <>
@@ -90,3 +91,4 @@ const ProductList = () => {
 };
 
 export default ProductList;
+

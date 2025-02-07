@@ -25,7 +25,7 @@ const NavBar = () => {
 
                         {/* Cart Icon with Notification */}
                         <Nav.Link href="#" className="position-relative" >
-                            <Link to="/addcart"> <i className="fas fa-shopping-cart"></i></Link>
+                            <Link to="/cart"> <i className="fas fa-shopping-cart"></i></Link>
                             <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">
                                 0
                             </span>
