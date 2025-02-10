@@ -12,6 +12,7 @@ max-width: 750px;
     left: 70%;
 background-color: #e6dfdf;
 padding: 10px;
+position: fixed;
 }
 .cart-container img{
     width: 200px;
