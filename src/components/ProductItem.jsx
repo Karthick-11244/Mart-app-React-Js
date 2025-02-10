@@ -28,10 +28,10 @@ const ProductItem = () => {
   // Handle adding product to cart and showing toast
   const dispatch = useDispatch();
   const handleAddToCart = (product) => {
-      dispatch(addToCart(product));
+    dispatch(addToCart(product));
     toast.success(`${product.productName} has been added to Cart!`, {
-      position: "top-right",  // Correct positioning format as a string
-      autoClose: 3000, // Auto close after 3 seconds
+      position: "top-right",
+      autoClose: 2000,
     });
   };
 
